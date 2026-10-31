@@ -74,10 +74,16 @@ void MidiSynchronizer::receive(const MidiEvent& e, int numBeatsInLoop)
 		break;
 
 	case MidiEvent::SYSTEM_START:
+		m_lastTimestamp = 0.0;
+		m_lastDelta     = 0.0;
+		m_timeElapsed   = 0.0;
 		onStart();
 		break;
 
 	case MidiEvent::SYSTEM_STOP:
+		m_lastTimestamp = 0.0;
+		m_lastDelta     = 0.0;
+		m_timeElapsed   = 0.0;
 		onStop();
 		break;
 
