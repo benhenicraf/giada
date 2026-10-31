@@ -75,6 +75,7 @@ geGroupChannel::geGroupChannel(c::channel::Data d)
 	vol          = new geDial(0, 0, 0, 0);
 
 	addWidget(playButton, G_GUI_UNIT);
+	addWidget(arm, G_GUI_UNIT);
 	addWidget(mainButton);
 	addWidget(midiActivity, 10);
 	addWidget(mute, G_GUI_UNIT);
